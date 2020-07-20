@@ -107,7 +107,6 @@ const Container = () => {
   return (
     <div className="container">
       {planets.map(function (planet, index) {
-        //console.log("planet", planet, "index", index);
         return (
           <Planet
             name={planet.name}
@@ -115,6 +114,7 @@ const Container = () => {
             moons={planet.moons}
             description={planet.desc}
             diameter={planet.diameter}
+            key={planet.id}
           />
         );
       })}
